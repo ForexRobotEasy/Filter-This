@@ -1,0 +1,104 @@
+
+// Program: Filter This
+// Developer's site: forexroboteasy.com
+// Development: Forex Robot Easy Team
+
+// Import necessary libraries
+#include <stdlib.mqh>
+#include <trade\trade.mqh>
+#include <datetime.mqh>
+
+// Define constants for order types
+const int MARKET_ORDER = 1;
+const int LIMIT_ORDER = 2;
+const int STOP_ORDER = 3;
+const int TRAILING_STOP = 4;
+
+// Define constants for order parameters
+double priceLevel = 0.0;
+double stopLoss = 0.0;
+double takeProfit = 0.0;
+double trailingStop = 0.0;
+
+// Define function to filter news
+void filterNews(string currency, int impact) {
+    // Implement news filtering logic here
+    // Use Forex Factory's economic calendar data
+    // Filter news based on currency and impact
+}
+
+// Define function to select news based on chart
+void selectNews() {
+    // Implement logic to select news relevant to the current chart
+    // Automatically identify keywords and filter news accordingly
+}
+
+// Define function to refresh news source
+void refreshNews(int interval) {
+    // Implement logic to refresh news source at user-specified intervals
+}
+
+// Define function to validate order inputs
+bool validateOrderInputs(double price, double stopLoss, double takeProfit, double trailingStop) {
+    // Implement logic to validate order inputs
+    // Check if inputs are within acceptable ranges
+    // Display error messages for invalid inputs
+    // Return true if all inputs are valid, otherwise false
+}
+
+// Define function to execute market order
+void executeMarketOrder(double price) {
+    // Implement logic to execute a market order
+    // Use the Trade library to place the order
+    // Display order execution details and error messages if any
+}
+
+// Define function to execute limit order
+void executeLimitOrder(double price) {
+    // Implement logic to execute a limit order
+    // Use the Trade library to place the order
+    // Display order execution details and error messages if any
+}
+
+// Define function to execute stop order
+void executeStopOrder(double price) {
+    // Implement logic to execute a stop order
+    // Use the Trade library to place the order
+    // Display order execution details and error messages if any
+}
+
+// Define function to execute trailing stop
+void executeTrailingStop(double trailingStop) {
+    // Implement logic to execute a trailing stop
+    // Use the Trade library to set the trailing stop value
+    // Display trailing stop execution details and error messages if any
+}
+
+// Main function
+void OnStart() {
+    // Filter news based on preferred currencies and impact
+    filterNews('USD', 2);
+
+    // Select news relevant to the current chart
+    selectNews();
+
+    // Refresh news source at user-specified intervals
+    refreshNews(60);
+
+    // Validate order inputs
+    bool validInputs = validateOrderInputs(priceLevel, stopLoss, takeProfit, trailingStop);
+
+    if (validInputs) {
+        // Execute market order
+        executeMarketOrder(priceLevel);
+
+        // Execute limit order
+        executeLimitOrder(priceLevel);
+
+        // Execute stop order
+        executeStopOrder(priceLevel);
+
+        // Execute trailing stop
+        executeTrailingStop(trailingStop);
+    }
+}
